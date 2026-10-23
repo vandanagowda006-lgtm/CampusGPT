@@ -1,0 +1,533 @@
+/* ==================================================
+   CAMPUSGPT — GEN Z AI STUDY COMPANION
+   Dark Mode | Neon Purple | Modern SaaS
+   ================================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap');
+
+:root {
+    --bg: #09080f;
+    --surface: #11101a;
+    --card: #171421;
+    --border: #302541;
+
+    --purple: #a855f7;
+    --purple-bright: #c084fc;
+    --pink: #f0abfc;
+    --blue: #818cf8;
+
+    --white: #ffffff;
+    --text: #f5f0ff;
+    --muted: #c4bad8;
+}
+
+/* ================= MAIN BACKGROUND ================= */
+
+.stApp {
+    background:
+        radial-gradient(
+            ellipse at 75% 0%,
+            rgba(124, 58, 237, 0.20),
+            transparent 35%
+        ),
+        radial-gradient(
+            ellipse at 0% 70%,
+            rgba(168, 85, 247, 0.10),
+            transparent 32%
+        ),
+        var(--bg) !important;
+
+    color: var(--text) !important;
+    font-family: 'DM Sans', sans-serif !important;
+}
+
+/* Main page width and spacing */
+
+.block-container {
+    max-width: 1450px;
+    padding-top: 2.2rem;
+    padding-bottom: 3rem;
+}
+
+/* ================= TYPOGRAPHY ================= */
+
+.stApp h1,
+.stApp h2,
+.stApp h3,
+.stApp h4 {
+    font-family: 'Space Grotesk', sans-serif !important;
+    color: #ffffff !important;
+    letter-spacing: -0.6px;
+}
+
+.stApp h1 {
+    font-size: clamp(2.5rem, 4vw, 3.8rem) !important;
+    font-weight: 700 !important;
+    line-height: 1.15 !important;
+}
+
+.stApp p,
+.stApp li {
+    color: #e0d8ef !important;
+    font-family: 'DM Sans', sans-serif !important;
+    line-height: 1.75;
+}
+
+/* ================= SIDEBAR ================= */
+
+[data-testid="stSidebar"] {
+    background: linear-gradient(
+        180deg,
+        #151020 0%,
+        #100d18 60%,
+        #0b0a11 100%
+    ) !important;
+
+    border-right: 1px solid #30213f;
+}
+
+[data-testid="stSidebar"] .block-container {
+    padding-top: 1.8rem;
+}
+
+/* Sidebar headings */
+
+[data-testid="stSidebar"] h1,
+[data-testid="stSidebar"] h2,
+[data-testid="stSidebar"] h3 {
+    color: #ffffff !important;
+    font-family: 'Space Grotesk', sans-serif !important;
+    font-size: 1.3rem !important;
+    letter-spacing: -0.3px;
+}
+
+/* Sidebar text */
+
+[data-testid="stSidebar"] p,
+[data-testid="stSidebar"] label,
+[data-testid="stSidebar"] small {
+    color: #e0d8ef !important;
+}
+
+/* Prevent sidebar content from looking faded */
+
+[data-testid="stSidebar"] [data-testid="stMarkdownContainer"] {
+    color: #e0d8ef !important;
+}
+
+/* ================= FILE UPLOADER ================= */
+
+[data-testid="stFileUploader"] {
+    background: #171321 !important;
+    border: 1px solid #67409a !important;
+    border-radius: 18px !important;
+    padding: 12px !important;
+}
+
+/* Drag-and-drop area */
+
+[data-testid="stFileUploaderDropzone"] {
+    background: #20182e !important;
+    border: 1px dashed #a855f7 !important;
+    border-radius: 14px !important;
+}
+
+/* File uploader text, including the size limit */
+
+[data-testid="stFileUploader"] label,
+[data-testid="stFileUploader"] span,
+[data-testid="stFileUploader"] small,
+[data-testid="stFileUploader"] p,
+[data-testid="stFileUploader"] [data-testid="stMarkdownContainer"] {
+    color: #ffffff !important;
+    opacity: 1 !important;
+}
+
+/* Upload button */
+
+[data-testid="stFileUploader"] button {
+    background: linear-gradient(
+        110deg,
+        #7c3aed,
+        #a855f7
+    ) !important;
+
+    color: #ffffff !important;
+    border: 1px solid #c084fc !important;
+    border-radius: 11px !important;
+    font-weight: 700 !important;
+}
+
+[data-testid="stFileUploader"] button:hover {
+    background: #9333ea !important;
+    box-shadow: 0 0 18px rgba(168, 85, 247, 0.3);
+}
+
+/* ================= CAMPUSGPT BRANDING ================= */
+
+/* Use this class on the CampusGPT title */
+
+.brand-title {
+    font-family: 'Space Grotesk', sans-serif !important;
+    font-size: clamp(2.8rem, 5vw, 4.5rem) !important;
+    font-weight: 700 !important;
+    letter-spacing: -2px;
+    line-height: 1.2;
+
+    background: linear-gradient(
+        100deg,
+        #ffffff 5%,
+        #d8b4fe 42%,
+        #a855f7 72%,
+        #f0abfc 100%
+    );
+
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+    filter: drop-shadow(
+        0 0 20px rgba(168, 85, 247, 0.15)
+    );
+}
+
+/* Small label above the main title */
+
+.eyebrow {
+    display: inline-block;
+    padding: 7px 13px;
+
+    color: #e9d5ff !important;
+    background: rgba(168, 85, 247, 0.12);
+
+    border: 1px solid rgba(192, 132, 252, 0.35);
+    border-radius: 30px;
+
+    font-size: 0.82rem;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+}
+
+/* Main subtitle */
+
+.hero-subtitle {
+    color: #c4bad8 !important;
+    font-size: 1.1rem;
+    line-height: 1.8;
+    max-width: 650px;
+}
+
+/* ================= HERO PANEL ================= */
+
+.hero-panel {
+    position: relative;
+    overflow: hidden;
+
+    padding: 35px;
+    margin: 12px 0 24px;
+
+    background: linear-gradient(
+        135deg,
+        rgba(35, 24, 53, 0.96),
+        rgba(17, 16, 27, 0.98)
+    );
+
+    border: 1px solid #49305f;
+    border-radius: 24px;
+
+    box-shadow:
+        0 12px 45px rgba(0, 0, 0, 0.20),
+        inset 0 1px rgba(255, 255, 255, 0.03);
+}
+
+.hero-panel h2 {
+    font-family: 'Space Grotesk', sans-serif !important;
+    color: #ffffff !important;
+}
+
+.hero-panel p {
+    color: #ded3ee !important;
+}
+
+/* ================= FEATURE CARDS ================= */
+
+.feature-card {
+    position: relative;
+    min-height: 195px;
+
+    padding: 23px;
+
+    background: linear-gradient(
+        145deg,
+        #1b1728,
+        #12111b
+    );
+
+    border: 1px solid #38294c;
+    border-radius: 20px;
+
+    transition:
+        transform 0.25s ease,
+        border-color 0.25s ease,
+        box-shadow 0.25s ease;
+}
+
+.feature-card:hover {
+    transform: translateY(-5px);
+
+    border-color: #a855f7;
+
+    box-shadow:
+        0 12px 35px rgba(147, 51, 234, 0.14);
+}
+
+.feature-card h3 {
+    color: #e9d5ff !important;
+    font-size: 1.2rem !important;
+    margin-bottom: 12px;
+}
+
+.feature-card p {
+    color: #c9bfdc !important;
+    font-size: 0.93rem;
+    line-height: 1.7;
+}
+
+/* ================= FEATURE BADGES ================= */
+
+.badge {
+    display: inline-block;
+
+    padding: 8px 13px;
+    margin: 5px 5px 5px 0;
+
+    color: #e9d5ff !important;
+    background: #211630;
+
+    border: 1px solid #493063;
+    border-radius: 30px;
+
+    font-size: 0.84rem;
+    font-weight: 600;
+}
+
+/* ================= BUTTONS ================= */
+
+.stButton > button {
+    background: linear-gradient(
+        110deg,
+        #7c3aed,
+        #a855f7
+    ) !important;
+
+    color: #ffffff !important;
+
+    border: 1px solid #c084fc !important;
+    border-radius: 12px !important;
+
+    font-family: 'DM Sans', sans-serif !important;
+    font-weight: 700 !important;
+
+    transition: all 0.2s ease;
+}
+
+.stButton > button:hover {
+    background: linear-gradient(
+        110deg,
+        #9333ea,
+        #c026d3
+    ) !important;
+
+    box-shadow:
+        0 0 22px rgba(168, 85, 247, 0.30);
+
+    transform: translateY(-2px);
+}
+
+/* ================= CHAT ================= */
+
+[data-testid="stChatMessage"] {
+    background: #151321 !important;
+    border: 1px solid #342544 !important;
+    border-radius: 18px !important;
+
+    padding: 16px;
+    margin-bottom: 12px;
+}
+
+/* Readable chat content */
+
+[data-testid="stChatMessage"] p,
+[data-testid="stChatMessage"] li,
+[data-testid="stChatMessage"] strong {
+    color: #f5f0ff !important;
+}
+
+/* Chat input container */
+
+[data-testid="stChatInput"] {
+    background: #171321 !important;
+    border: 1px solid #67409a !important;
+    border-radius: 16px !important;
+}
+
+/* Chat input text */
+
+[data-testid="stChatInput"] textarea {
+    color: #ffffff !important;
+    -webkit-text-fill-color: #ffffff !important;
+}
+
+/* Placeholder */
+
+[data-testid="stChatInput"] textarea::placeholder {
+    color: #c4bad8 !important;
+    -webkit-text-fill-color: #c4bad8 !important;
+    opacity: 1 !important;
+}
+
+/* ================= STATUS MESSAGES ================= */
+
+[data-testid="stAlert"] {
+    border-radius: 14px !important;
+}
+
+/* ================= DIVIDERS ================= */
+
+hr {
+    border-color: #302541 !important;
+}
+
+/* ================= MOTIVATION BANNER ================= */
+
+.motivation-banner {
+    padding: 24px;
+    margin-top: 25px;
+
+    background: linear-gradient(
+        110deg,
+        #21132e,
+        #19132b,
+        #25132e
+    );
+
+    border: 1px solid #59376f;
+    border-radius: 20px;
+
+    color: #f0dfff !important;
+    text-align: center;
+    font-weight: 700;
+}
+
+/* ================= FOOTER ================= */
+
+.footer {
+    padding: 25px 0 10px;
+    text-align: center;
+    color: #b8a9d0 !important;
+    font-size: 0.85rem;
+}
+
+/* ================= RESPONSIVE ================= */
+
+@media (max-width: 768px) {
+    .block-container {
+        padding: 1rem;
+    }
+
+    .brand-title {
+        font-size: 2.7rem !important;
+    }
+
+    .feature-card {
+        min-height: 150px;
+        margin-bottom: 12px;
+    }
+
+    .hero-panel {
+        padding: 22px;
+    }
+}
+/* =====================================
+   CAMPUSGPT SIDEBAR — GEN Z STYLE 💜
+   ===================================== */
+
+/* Sidebar background */
+[data-testid="stSidebar"] {
+    background: linear-gradient(
+        180deg,
+        #120d1d 0%,
+        #0b0912 100%
+    ) !important;
+
+    border-right: 1px solid #352047;
+}
+
+/* Sidebar headings */
+[data-testid="stSidebar"] h1,
+[data-testid="stSidebar"] h2,
+[data-testid="stSidebar"] h3 {
+    color: #ffffff !important;
+    font-family: 'Space Grotesk', sans-serif !important;
+    font-size: 1.25rem !important;
+    font-weight: 700 !important;
+    line-height: 1.4 !important;
+    letter-spacing: -0.3px;
+    overflow-wrap: normal;
+    word-break: normal;
+}
+
+/* Sidebar paragraphs and descriptions */
+[data-testid="stSidebar"] p,
+[data-testid="stSidebar"] label,
+[data-testid="stSidebar"] small {
+    color: #e5dcf5 !important;
+    font-size: 0.95rem !important;
+    line-height: 1.7 !important;
+    opacity: 1 !important;
+}
+
+/* Sidebar icons and general text */
+[data-testid="stSidebar"] [data-testid="stMarkdownContainer"] {
+    color: #e5dcf5 !important;
+}
+
+/* Make the sidebar divider visible */
+[data-testid="stSidebar"] hr {
+    border-color: #39234f !important;
+    opacity: 1 !important;
+}
+
+/* Sidebar information boxes */
+[data-testid="stSidebar"] [data-testid="stAlert"] {
+    background: #211832 !important;
+    border: 1px solid #493063 !important;
+    border-radius: 12px !important;
+}
+
+[data-testid="stSidebar"] [data-testid="stAlert"] p {
+    color: #f3e8ff !important;
+}
+
+/* Sidebar buttons */
+[data-testid="stSidebar"] .stButton > button {
+    width: 100%;
+    background: linear-gradient(
+        110deg,
+        #7c3aed,
+        #a855f7
+    ) !important;
+
+    color: #ffffff !important;
+    border: 1px solid #c084fc !important;
+    border-radius: 11px !important;
+}
+
+/* Keep the sidebar readable on smaller screens */
+@media (max-width: 768px) {
+    [data-testid="stSidebar"] h1,
+    [data-testid="stSidebar"] h2,
+    [data-testid="stSidebar"] h3 {
+        font-size: 1.15rem !important;
+    }
+}

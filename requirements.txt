@@ -1,0 +1,9 @@
+streamlit
+python-dotenv
+google-genai
+faiss-cpu
+numpy
+pymupdf
+pytesseract
+pillow
+pypdf
